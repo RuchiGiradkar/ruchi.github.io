@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ruchi — Cybersecurity Certifications</title>
+  <link rel="canonical" href="https://ruchi.github.io/" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' https://images.credly.com data:;
+    style-src 'self' 'unsafe-inline';
+    script-src 'self';
+    connect-src 'self';
+    frame-src https://www.credly.com https://learn.microsoft.com;
+    object-src 'none';
+    base-uri 'self';
+    form-action 'none';
+    frame-ancestors 'none';
+    upgrade-insecure-requests
+  ">
+
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="no-referrer" />
+  <meta name="description" content="Verified cybersecurity certifications and badges with official links." />
+</head>
+
+<body>
+  <header class="hero">
+    <h1>Ruchi — OT & Cloud Security</h1>
+    <p>Verified professional certifications and badges (official links below)</p>
+  </header>
+
+  <main>
+    <section class="cert-grid">
+      
+      <article class="cert-card">
+        <img src="assets/images/cysa.png" alt="CompTIA CySA+ ce (CS0-003) Certification badge" />
+        <h2>CompTIA CySA+ ce (CS0-003) Certification</h2>
+        <p>Issuer: CompTIA • Earned: October 2025</p>
+        <a class="verify-btn"
+           href="https://www.credly.com/earner/earned/badge/efa4350e-797c-4a68-9c71-2cfb777c0939"
+           target="_blank" rel="noopener noreferrer"
+           onclick="notify('CYSA')">
+          🔗 Verify on Credly
+        </a>
+      </article>
+    
+      <article class="cert-card">
+        <img src="assets/images/securityplus.png" alt="CompTIA Security+ ce (SY0-701) Certification badge" />
+        <h2>CompTIA Security+ ce (SY0-701) Certification</h2>
+        <p>Issuer: CompTIA • Earned: August 2025</p>
+        <a class="verify-btn"
+           href="https://www.credly.com/badges/0d6a6458-4951-40d6-9d43-e96b053f551b"
+           target="_blank" rel="noopener noreferrer"
+           onclick="notify('SECURITYPLUS')">
+          🔗 Verify on Credly
+        </a>
+      </article>
+    
+      <article class="cert-card">
+        <img src="assets/images/csap.png" alt="CompTIA Security Analytics Professional – CSAP Stackable Certification badge" />
+        <h2>CompTIA Security Analytics Professional – CSAP Stackable Certification</h2>
+        <p>Issuer: CompTIA • Earned: August 2025</p>
+        <a class="verify-btn"
+           href="https://www.credly.com/badges/1f388bd5-618b-4880-b9da-dda9da02de68"
+           target="_blank" rel="noopener noreferrer"
+           onclick="notify('CSAP')">
+          🔗 Verify on Credly
+        </a>
+      </article>
+    
+      <article class="cert-card">
+        <img src="assets/images/aplus.png" alt="CompTIA A+ ce Certification badge" />
+        <h2>CompTIA A+ ce Certification</h2>
+        <p>Issuer: CompTIA • Earned: July 2025</p>
+        <a class="verify-btn"
+           href="https://www.credly.com/badges/3addedb8-49e3-409c-bdc5-00185b29c9c"
+           target="_blank" rel="noopener noreferrer"
+           onclick="notify('APLUS')">
+          🔗 Verify on Credly
+        </a>
+      </article>
+    
+    </section>
+
+    <section class="hashes">
+      <h3>Certificate Hashes (tamper-evidence)</h3>
+      <p>If you host PDFs locally, publish their SHA-256 here so any changes are detectable.</p>
+      <code>
+        <!-- Example:
+        CySA_Ruchi.pdf  sha256: REPLACE...
+        SecurityPlus_Ruchi.pdf  sha256: REPLACE...
+        CSAP_Ruchi.pdf  sha256: REPLACE...
+        APlus_Ruchi.pdf  sha256: REPLACE...
+        -->
+      </code>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Ruchi |
+      <a href="mailto:ruchigiradkar@example.com" rel="noopener">Contact</a> |
+      Hosted on GitHub Pages
+    </p>
+  </footer>
+
+  <script>
+    function notify(label){
+      try {
+        fetch('https://maker.ifttt.com/trigger/cert_click/with/key/REPLACE_IF_USING_IFTTT', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ value1: label, value2: document.title })
+        });
+      } catch(e) {}
+    }
+  </script>
+</body>
+</html>
