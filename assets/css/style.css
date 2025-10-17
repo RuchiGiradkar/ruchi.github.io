@@ -1,0 +1,23 @@
+:root {
+  --bg:#0b1020; --panel:#141b33; --ink:#e7ecf3; --muted:#a5afc9;
+  --btn:#1a2550; --btnHover:#223370; --border:#23304f;
+}
+* { box-sizing: border-box; }
+html,body { margin:0; padding:0; background:var(--bg); color:var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial; }
+.hero { text-align:center; padding:64px 20px; background: linear-gradient(180deg,#101c38, var(--bg)); }
+.hero h1 { margin:0 0 8px; font-size:28px; letter-spacing:.2px; }
+.hero p { margin:0; color:var(--muted); }
+.cert-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:20px; padding:40px 24px; max-width:1100px; margin:0 auto; }
+.cert-card { background:var(--panel); border-radius:16px; padding:20px; text-align:center;
+  box-shadow:0 2px 12px rgba(0,0,0,.35); border:1px solid var(--border); }
+.cert-card img { width:120px; height:120px; object-fit:contain; margin-bottom:12px; }
+.cert-card h2 { margin:8px 0; font-size:18px; }
+.cert-card p { margin:0; color:var(--muted); }
+.verify-btn { display:inline-block; margin-top:12px; background:var(--btn); color:#cfe0ff;
+  padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600; border:1px solid #2e3e73; }
+.verify-btn:hover { background:var(--btnHover); }
+.hashes { max-width:1100px; margin:0 auto 24px; padding:0 24px; color:var(--muted); }
+.hashes h3 { color:var(--ink); }
+.hashes code { display:block; background:#0e1630; padding:12px; border-radius:10px; border:1px solid var(--border); overflow:auto; }
+footer { text-align:center; padding:24px; font-size:13px; color:var(--muted); }
